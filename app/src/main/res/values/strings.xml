@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Tracker</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!-- Home Page -->
+    <string name="home_title">Welcome to Tracker!</string>
+    <string name="home_description">
+        You can use this app to keep track of anything that you have watched in the form of lists.
+        Organise your lists in any way you want!
+    </string>
+    <string name="home_splash_description">Image of someone watching videos</string>
+    <string name="home_go_to_lists_button">Go to Lists</string>
+
+    <!-- Item Card -->
+    <string name="item_name">Name</string>
+    <string name="item_score">Score</string>
+    <string name="item_progress_text">Progress:</string>
+    <string name="item_progress">Progress</string>
+    <string name="item_status_text">Status:</string>
+    <string name="item_status">Status</string>
+
+    <!-- Item Info -->
+    <string name="item_score_text">Score</string>
+
+    <!-- Add Item Dialog -->
+    <string name="add_item_dialog_title">Add Item</string>
+
+    <!-- Add List Dialog -->
+    <string name="add_list_dialog_title">Add List</string>
+    <string name="list_name">Name</string>
+
+    <!-- Edit Image Fragment -->
+    <string name="image_placeholder_text">Choose an image...</string>
+    <string name="add_image_from_gallery_button">Add Image From Gallery</string>
+    <string name="add_image_from_camera_button">Add Image From Camera</string>
+
+    <!-- General Buttons -->
+    <string name="upload">Upload</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+
+    <!-- Item spinner values -->
+    <string-array name="status">
+        <item>Plan to watch</item>
+        <item>Watching</item>
+        <item>Completed</item>
+    </string-array>
+
+    <string-array name="score">
+        <item>Select score</item>
+        <item>(10) Masterpiece</item>
+        <item>(9) Great</item>
+        <item>(8) Very Good</item>
+        <item>(7) Good</item>
+        <item>(6) Fine</item>
+        <item>(5) Average</item>
+        <item>(4) Bad</item>
+        <item>(3) Very Bad</item>
+        <item>(2) Horrible</item>
+        <item>(1) Appalling</item>
+    </string-array>
+</resources>

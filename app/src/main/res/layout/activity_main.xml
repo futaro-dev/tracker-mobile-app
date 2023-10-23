@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mainWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Hello"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mainLogoutButton"
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="8dp"
+        android:padding="8dp"
+        android:background="@drawable/button_circle_background"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_margin="10dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainLogoutButton"
+        app:layout_constraintEnd_toEndOf="@+id/mainLogoutButton"
+        app:layout_constraintStart_toStartOf="@+id/mainLogoutButton"
+        app:layout_constraintTop_toTopOf="@+id/mainLogoutButton"
+        app:shapeAppearanceOverlay="@style/ImageView.Circle"
+        app:srcCompat="@drawable/default_account_circle_icon"
+        tools:srcCompat="@drawable/default_account_circle_icon" />
+
+    <RelativeLayout
+        android:id="@+id/mainRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainLogoutButton">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mainFragmentContainer"
+            android:elevation="10dp"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:layout_constraintVertical_bias="0.0"
+            app:navGraph="@navigation/nav_graph_main" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

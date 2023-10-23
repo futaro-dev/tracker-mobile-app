@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.trackerapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.trackerapp.ui.list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_itemsFragment"
+            app:destination="@id/itemsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemsFragment"
+        android:name="com.example.trackerapp.ui.items.ItemsFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_items" >
+        <action
+            android:id="@+id/action_itemsFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_itemsFragment_to_itemFragment"
+            app:destination="@id/itemFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.example.trackerapp.ui.item.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+        <action
+            android:id="@+id/action_itemFragment_to_itemsFragment"
+            app:destination="@id/itemsFragment" />
+        <action
+            android:id="@+id/action_itemFragment_to_editItemFragment"
+            app:destination="@id/editItemFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_itemFragment_to_editItemImageFragment"
+            app:destination="@id/editItemImageFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/editItemFragment"
+        android:name="com.example.trackerapp.ui.edit.EditItemFragment"
+        android:label="EditItemFragment" >
+        <action
+            android:id="@+id/action_editItemFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editItemImageFragment"
+        android:name="com.example.trackerapp.ui.edit.EditItemImageFragment"
+        android:label="EditItemImageFragment" >
+        <action
+            android:id="@+id/action_editItemImageFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+</navigation>
